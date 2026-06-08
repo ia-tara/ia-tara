@@ -1,13 +1,25 @@
-# TP 2025 Team 12 - Frontend
+# IA-TARA Frontend
 
-## How to run
+React, TypeScript, Vite, Tailwind, and React Flow frontend for the IA-TARA application.
 
-1. `git git@github.com:rykktiadloans/TP_team12_frontend.git`
-2. `cd TP_team12_frontend`
-3. `npm i`
-4. `npm run dev`
+Run it from this directory:
 
-## Technologies Used
+```sh
+npm ci
+npm run dev
+```
+
+The development server starts on `http://localhost:5173`. The backend should be running on `http://localhost:8000`; the login screen lets you override the backend URL for the current browser session.
+
+Useful commands:
+
+```sh
+npm run lint
+npm run build
+npm run preview
+```
+
+## Technologies
 
 - [TypeScript](https://www.typescriptlang.org/)
 - [React](https://react.dev/)
