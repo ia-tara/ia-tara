@@ -15,9 +15,67 @@ For the detailed project write-up and TARA background, see `documentation/main.p
 - Python 3.12 or newer
 - Node.js 22 recommended
 - npm
-- Docker and Docker Compose, if using containers
+- Docker and Docker Compose, if using the containerized app
 
-## Quick Start
+## Run with Docker
+
+The Docker setup builds the React frontend and serves it from the Django backend container. There is one app container and one named Docker volume for SQLite data.
+
+```sh
+docker compose up --build
+```
+
+Open `http://localhost:8000`.
+
+Routes:
+
+- React app: `http://localhost:8000/`
+- Backend API: `http://localhost:8000/api/`
+- Django admin: `http://localhost:8000/admin/`
+
+Useful container commands:
+
+```sh
+docker compose exec app python manage.py migrate
+docker compose exec app python manage.py createsuperuser
+docker compose exec app python manage.py test api
+```
+
+The container starts by copying the checked-in demo database into the named SQLite volume if the volume is empty, then runs migrations. Remove the volume if you want to reset container data:
+
+```sh
+docker compose down -v
+```
+
+If you previously ran the old two-service Compose setup and port `8000` is still allocated, remove orphaned services:
+
+```sh
+docker compose down --remove-orphans
+```
+
+## Demo Credentials
+
+The checked-in SQLite database contains demo users:
+
+| Username | Password |
+| --- | --- |
+| `john_doe` | `pass1234` |
+| `oliver` | `pass1234` |
+| `richard` | `pass1234` |
+
+These are normal application users, not Django admin users. Create an admin account with `python manage.py createsuperuser` if you need `/admin/`.
+
+You can also create a new user from the login screen. For a fresh local database, run:
+
+```sh
+cd backend/tp
+python manage.py migrate
+python manage.py seeddb
+```
+
+## Local Development
+
+For day-to-day development, run the backend and frontend separately. This keeps Django auto-reload and Vite hot reload.
 
 Start the backend:
 
@@ -39,57 +97,7 @@ npm ci
 npm run dev
 ```
 
-Open `http://localhost:5173`.
-
-On the login screen, set the backend URL to `http://127.0.0.1:8000` or `http://localhost:8000`. Do not include `/api`.
-
-## Docker
-
-Run both services:
-
-```sh
-docker compose up --build
-```
-
-Then open:
-
-- Frontend: `http://localhost:5173`
-- Backend API: `http://localhost:8000/api/`
-- Django admin: `http://localhost:8000/admin/`
-
-Useful container commands:
-
-```sh
-docker compose exec backend python manage.py migrate
-docker compose exec backend python manage.py createsuperuser
-docker compose exec backend python manage.py test api
-docker compose exec frontend npm run lint
-docker compose exec frontend npm run build
-```
-
-The Docker setup is for development. It bind-mounts `frontend/` and `backend/`, keeps frontend dependencies in a Docker volume, and uses the Django development server with SQLite.
-
-## Demo Credentials
-
-The checked-in SQLite database contains demo users:
-
-| Username | Password |
-| --- | --- |
-| `john_doe` | `pass1234` |
-| `oliver` | `pass1234` |
-| `richard` | `pass1234` |
-
-These are normal application users, not Django admin users. Create an admin account with `python manage.py createsuperuser` if you need `/admin/`.
-
-You can also create a new user from the login screen. For a fresh database, run:
-
-```sh
-cd backend/tp
-python manage.py migrate
-python manage.py seeddb
-```
-
-The seed command creates the same demo users and sample projects.
+Open `http://localhost:5173`. In Vite development, the frontend automatically calls the backend at `http://localhost:8000/api`.
 
 ## Backend Development
 
@@ -117,15 +125,17 @@ Start from:
 cp backend/.env.example backend/.env
 ```
 
-Assistant integration is optional:
+Useful settings:
 
 ```sh
+DJANGO_DEBUG=true
+DJANGO_ALLOWED_HOSTS=localhost,127.0.0.1,0.0.0.0
 ASSISTANT_API=
 ASSISTANT_API_URL=
-ASSISTANT_MODEL=
+ASSISTANT_MODEL=deepseek-chat
 ```
 
-Leave these empty for normal local development without an external LLM provider.
+Leave the assistant values empty for normal local development without an external LLM provider.
 
 ## Frontend Development
 
@@ -139,4 +149,7 @@ npm run lint
 npm run build
 ```
 
-The frontend sends API requests to `${backendUrl}/api`. The backend URL is selected on the login screen and stored in browser session storage.
+API base behavior:
+
+- Vite development: `http://<current-host>:8000/api`
+- Built app served by Django: same-origin `/api`

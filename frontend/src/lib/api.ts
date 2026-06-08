@@ -1,17 +1,16 @@
 import axios from "axios"
 
-function getDefaultBackendUrl() {
+function getBaseUrl() {
   if (typeof window === "undefined") {
-    return "http://127.0.0.1:8000"
+    return "http://127.0.0.1:8000/api"
   }
 
-  const host = window.location.hostname || "127.0.0.1"
-  return `${window.location.protocol}//${host}:8000`
-}
+  if (import.meta.env.DEV) {
+    const host = window.location.hostname || "127.0.0.1"
+    return `${window.location.protocol}//${host}:8000/api`
+  }
 
-function getBaseUrl() {
-  const backend = sessionStorage.getItem("backendUrl") || getDefaultBackendUrl()
-  return `${backend}/api`
+  return `${window.location.origin}/api`
 }
 
 export const api = axios.create()

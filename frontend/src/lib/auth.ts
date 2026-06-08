@@ -1,10 +1,15 @@
 import { api } from "./api.ts"
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
-export async function login({ backendUrl, username, password }) {
-  sessionStorage.setItem('backendUrl', backendUrl)
+type LoginInput = {
+  username: string
+  password: string
+}
 
+type RegisterInput = LoginInput & {
+  email?: string
+}
+
+export async function login({ username, password }: LoginInput) {
   const res = await api.post('/token/', {
     username,
     password,
@@ -18,11 +23,7 @@ export async function login({ backendUrl, username, password }) {
   return res.data
 }
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
-export async function register({ backendUrl, username, password, email }) {
-  sessionStorage.setItem('backendUrl', backendUrl)
-
+export async function register({ username, password, email }: RegisterInput) {
   const res = await api.post('/register/', {
     username,
     password,

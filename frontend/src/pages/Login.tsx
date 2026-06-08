@@ -1,12 +1,11 @@
 import { useState } from 'react'
-import { ShieldCheck, Server, User, Lock, Loader2 } from 'lucide-react'
+import { ShieldCheck, User, Lock, Loader2 } from 'lucide-react'
 
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
-  CardDescription,
 } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -19,13 +18,6 @@ type LoginProps = {
 }
 
 export default function Login({ onLoginSuccess }: LoginProps) {
-  const defaultBackendUrl =
-    typeof window === 'undefined'
-      ? 'http://127.0.0.1:8000'
-      : `${window.location.protocol}//${window.location.hostname}:8000`
-  const [backendUrl, setBackendUrl] = useState(
-    sessionStorage.getItem('backendUrl') || defaultBackendUrl
-  )
   const [mode, setMode] = useState<'login' | 'register'>('login')
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
@@ -41,14 +33,13 @@ export default function Login({ onLoginSuccess }: LoginProps) {
     try {
       if (mode === 'register') {
         await register({
-          backendUrl,
           username,
           password,
           email,
         })
       }
 
-      await login({ backendUrl, username, password })
+      await login({ username, password })
 
       onLoginSuccess()
     } catch (err: any) {
@@ -85,25 +76,6 @@ export default function Login({ onLoginSuccess }: LoginProps) {
 
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-5">
-              <div className="space-y-2">
-                <Label htmlFor="backendUrl">Backend <code>IP:port</code></Label>
-                <div className="relative">
-                  <Server className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-                  <Input
-                    id="backendUrl"
-                    type="text"
-                    placeholder={defaultBackendUrl}
-                    value={backendUrl}
-                    onChange={(e) => setBackendUrl(e.target.value)}
-                    className="pl-10"
-                    required
-                  />
-                </div>
-                <p className="text-xs text-muted-foreground">
-                  Enter the backend address without <code>/api</code>
-                </p>
-              </div>
-
               <div className="space-y-2">
                 <Label htmlFor="username">Username</Label>
                 <div className="relative">
