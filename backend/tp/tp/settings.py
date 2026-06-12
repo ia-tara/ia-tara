@@ -41,7 +41,10 @@ load_env_file(BASE_DIR / '.env')
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-76n2zx_3)(^2tpla*g8w&krtcoq2r2xeuwvit+31fa9z-4(0mk'
+SECRET_KEY = os.environ.get(
+    'DJANGO_SECRET_KEY',
+    'django-insecure-76n2zx_3)(^2tpla*g8w&krtcoq2r2xeuwvit+31fa9z-4(0mk',
+)
 
 # Provider-neutral assistant secret for the future Langchains integration.
 # Set ASSISTANT_API in the backend environment.

@@ -9,7 +9,7 @@ npm ci
 npm run dev
 ```
 
-The development server starts on `http://localhost:5173`. In Vite development, API requests go to `http://localhost:8000/api`, so keep the Django backend running on port `8000`.
+The development server starts on `http://localhost:5173`. In Vite development, API requests go to `http://localhost:8000/api`, so keep the Django backend running on port `8000`. `npm run preview` on Vite's default port `4173` uses the same backend URL.
 
 Useful commands:
 

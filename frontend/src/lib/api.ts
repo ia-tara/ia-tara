@@ -5,7 +5,7 @@ function getBaseUrl() {
     return "http://127.0.0.1:8000/api"
   }
 
-  if (import.meta.env.DEV) {
+  if (import.meta.env.DEV || window.location.port === "4173") {
     const host = window.location.hostname || "127.0.0.1"
     return `${window.location.protocol}//${host}:8000/api`
   }

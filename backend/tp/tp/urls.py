@@ -22,5 +22,5 @@ from .views import frontend_app
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("api/", include("api.urls")),
-    re_path(r'^(?!api/|admin/|static/).*$', frontend_app, name='frontend_app'),
+    re_path(r'^(?!(?:api|admin|static)(?:/|$)).*$', frontend_app, name='frontend_app'),
 ]

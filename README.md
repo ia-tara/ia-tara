@@ -53,6 +53,8 @@ If you previously ran the old two-service Compose setup and port `8000` is still
 docker compose down --remove-orphans
 ```
 
+This container setup is suitable for local demos and review. For a real deployment, set a proper `DJANGO_SECRET_KEY`, restrict `DJANGO_ALLOWED_HOSTS`, and review the remaining Django security settings.
+
 ## Demo Credentials
 
 The checked-in SQLite database contains demo users:
@@ -130,6 +132,7 @@ Useful settings:
 ```sh
 DJANGO_DEBUG=true
 DJANGO_ALLOWED_HOSTS=localhost,127.0.0.1,0.0.0.0
+DJANGO_SECRET_KEY=change-me-for-real-deployments
 ASSISTANT_API=
 ASSISTANT_API_URL=
 ASSISTANT_MODEL=deepseek-chat
@@ -152,4 +155,5 @@ npm run build
 API base behavior:
 
 - Vite development: `http://<current-host>:8000/api`
+- Vite preview on port `4173`: `http://<current-host>:8000/api`
 - Built app served by Django: same-origin `/api`

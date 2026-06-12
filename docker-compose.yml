@@ -8,7 +8,7 @@ services:
       - "8000:8000"
     environment:
       DJANGO_ALLOWED_HOSTS: localhost,127.0.0.1,0.0.0.0
-      DJANGO_DEBUG: "true"
+      DJANGO_DEBUG: "false"
       SQLITE_PATH: /data/db.sqlite3
     volumes:
       - app_data:/data
