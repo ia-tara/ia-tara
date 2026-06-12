@@ -2,7 +2,7 @@
 
 IA-TARA is a web application for creating Threat Analysis and Risk Assessment projects. It lets users model a system, connect components and assets, define damage and threat scenarios, add attack steps and controls, calculate risks, choose risk treatment, and export a PDF report.
 
-For the detailed project write-up and TARA background, see `documentation/main.pdf` or the LaTeX source in `documentation/main.tex`.
+For the detailed project write-up and TARA background, see `documentation/main.pdf` or the LaTeX source in `documentation/main.tex`. For a step-by-step usage guide, see [documentation/user_guide/program_guide.md](documentation/user_guide/program_guide.md).
 
 ## Repository Layout
 
