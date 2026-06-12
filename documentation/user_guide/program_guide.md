@@ -1,17 +1,15 @@
 # IA-TARA Program Guide
 
-This guide describes the basic workflow and the main functions of the IA-TARA application.
+This guide describes the basic workflow and the main features of the IA-TARA application.
 
-## 1. Start, Login and Create User
+## 1. Start, Log In and Create a User
 
-1. Start the backend server.
-2. Start the frontend application.
-3. Open the frontend in the browser.
-4. On the login screen, enter:
-   - backend address, for example `http://127.0.0.1:8000`
+1. Start the application.
+2. Open it in the browser.
+3. On the login screen, enter:
    - username
    - password
-5. Click **Login**.
+4. Click **Login**.
 
 After login, the application stores the access token for the current browser session and uses it when communicating with the backend.
 
@@ -19,7 +17,6 @@ If you do not have a user yet, click **Create a new user** on the login screen.
 
 In create-user mode, enter:
 
-- backend address,
 - username,
 - optional email,
 - password.
@@ -54,7 +51,7 @@ After opening a project, the screen is divided into several parts:
 
 The same project data is used everywhere. If you edit something in the details panel, the graph and tables update from the same backend model.
 
-The top menu also contains **Login**. This clears the current session and returns the application to the login screen. Use it when you want to switch user.
+The top menu also contains **Login**. This clears the current session and returns the application to the login screen. Use it when you want to switch users.
 
 ![Alt text](scr3.png)
 

@@ -20,7 +20,7 @@
 \section{Úvod}
 \textbf{TARA (Threat Analysis and Risk Assessment)} je systematický proces identifikácie, analýzy a hodnotenia hrozieb a rizík, ktoré môžu ovplyvniť bezpečnosť systému, produktu alebo služby. Cieľom analýzy je nájsť potenciálne zraniteľnosti, identifikovať útoky, ktoré by mohli tieto zraniteľnosti využiť, určiť výsledný dopad takýchto útokov a zistiť, ako je možné sa proti nim efektívne brániť.
 
-TARA sa využíva najmä v oblastiach, kde je bezpečnosť kritická -- ako napríklad v automobilovom priemysle, alebo pri vývoji rôznych kritických embedded systémov. Jej výsledkom je prehľad rizík a odporúčaní, ktoré slúžia ako základ pre návrh vhodných bezpečnostných opatrení, a ktoré zvyšujú celkovú odolnosť systému voči hrozbám.
+TARA sa využíva najmä v oblastiach, kde je bezpečnosť kritická -- ako napríklad v automobilovom priemysle alebo pri vývoji rôznych kritických embedded systémov. Jej výsledkom je prehľad rizík a odporúčaní, ktoré slúžia ako základ pre návrh vhodných bezpečnostných opatrení a zvyšujú celkovú odolnosť systému voči hrozbám.
 
 \section{TARA}
 TARA analýza pozostáva z nasledujúcich krokov:
@@ -46,10 +46,10 @@ TARA analýza pozostáva z nasledujúcich krokov:
     \end{itemize}
     \item Určenie \uv{\textbf{Damage scenarios}}
     \begin{itemize}
-        \item Čo sa môže stať, ak by bol stratený asset? Aké sú \textbf{dôsledky} - čo zlé sa môže stať?
+        \item Čo sa môže stať, ak by bol stratený asset? Aké sú \textbf{dôsledky} -- čo zlé sa môže stať?
         \item Napríklad, ak by sa pokazila parkovacia kamera, tak damage scenario by mohlo byť, že vodič pri parkovaní narazí do auta za ním, alebo že musí použiť spätné zrkadlo.
-        \item Každé damage scenario má priradený \uv{impact} - napr. to, že na cúvanie sa musí použiť spätné zrkadlo, má menší impact ako niečo, čo spôsobí čelnú kolíziu.
-        \item Sú 4 typy damage scenarios: \uv{safety}, \uv{financial}, \uv{personal}, \uv{operational}
+        \item Každé damage scenario má priradený \uv{impact} -- napr. to, že na cúvanie sa musí použiť spätné zrkadlo, má menší impact ako niečo, čo spôsobí čelnú kolíziu.
+        \item Existujú štyri typy damage scenarios: \uv{safety}, \uv{financial}, \uv{personal}, \uv{operational}
     \end{itemize}
     \item Určenie \uv{\textbf{Threat scenarios}}
     \begin{itemize}
@@ -62,7 +62,7 @@ TARA analýza pozostáva z nasledujúcich krokov:
         \item Ako zrealizovať threat scenario?
         \item Napr. ako by sa útočník vedel napojiť na kameru -- detailný opis krok za krokom.
         \item Pre jedno threat scenario môže existovať viac attack paths.
-        \item Každý attack path má \textbf{feasibility rating} - ako ťažké je vykonať daný útok (napr. ak na vykonanie útoku musí útočník byť fyzicky v aute, znižuje to jeho feasibility rating).
+        \item Každý attack path má \textbf{feasibility rating} -- ako ťažké je vykonať daný útok (napr. ak na vykonanie útoku musí útočník byť fyzicky v aute, znižuje to jeho feasibility rating).
     \end{itemize}
     \begin{figure}[H]
         \centering
@@ -70,7 +70,7 @@ TARA analýza pozostáva z nasledujúcich krokov:
         \vspace{-2em}
         \caption{Vzťahy medzi \textbf{attack paths}, \textbf{threat scenarios} a \textbf{damage scenarios}}
     \end{figure}
-    \item Kombináciou \textbf{impact ratingu} a korešpondujúceho \textbf{feasibility ratingu} sa vypočíta \textbf{risk value} - číslo medzi 1 a 5.
+    \item Kombináciou \textbf{impact ratingu} a korešpondujúceho \textbf{feasibility ratingu} sa vypočíta \textbf{risk value} -- číslo medzi 1 a 5.
     \begin{figure}[H]
         \centering
         \includegraphics[width=\textwidth]{s3.png}
@@ -80,7 +80,7 @@ TARA analýza pozostáva z nasledujúcich krokov:
     \item Vytvorenie \uv{\textbf{risk treatment options}} -- ako sa dá risk eliminovať (cybersecurity goals), alebo rozhodnutie, že je risk akceptovateľný a mal by sa ponechať (cybersecurity claims).
 \end{enumerate}
 
-Kroky 3, 4, 5 sa môžu robiť v ľubovoľnom poradí, t.j. môžeme začať otázkou \uv{Čo sa môže stať?} (threat scenario), z toho určiť, aké to má následky (damage scenarios), a ako sa to môže stať (attack paths). V praxi sa to nerobí krok za krokom, ale jednotlivé kroky TARA analýzy sa vykonávajú v poradí, ktoré je pre daný prípad najvhodnejšie. Poradie samotné teda nie je dôležité, záleží iba na vzťahoch medzi jednotlivými threat scenarios, damage scenarios a attack paths navzájom.
+Kroky 3, 4, 5 sa môžu robiť v ľubovoľnom poradí, t. j. môžeme začať otázkou \uv{Čo sa môže stať?} (threat scenario), z toho určiť, aké to má následky (damage scenarios), a ako sa to môže stať (attack paths). V praxi sa to nerobí krok za krokom, ale jednotlivé kroky TARA analýzy sa vykonávajú v poradí, ktoré je pre daný prípad najvhodnejšie. Poradie samotné teda nie je dôležité, záleží iba na vzťahoch medzi jednotlivými threat scenarios, damage scenarios a attack paths navzájom.
     
 \section{Databázy}
 
@@ -99,16 +99,16 @@ ATT\&CK je organizovaný do viacerých \textbf{matíc} (napr. Enterprise, Mobile
 \end{description}
 
 \begin{itemize}
-    \item Mapuje techniky (typy nápadov) na taktiky (ciele nápadov). Technika môže patriť do niekoľkých taktík.
+    \item Mapuje techniky (typy útokov) na taktiky (ciele útokov). Technika môže patriť do niekoľkých taktík.
     \item Dostupné verzie pre enterprise systémy, mobily a ICS. Pre autá je najviac použiteľná mobilná matica, prípadne matica ICS.
     \item Obranné opatrenia proti technikám: mitigations, detections, assets (nie je dostupné pre mobily).
 \end{itemize}
 
 Databáza ATT\&CK je dostupná vo formáte STIX dokumentu (podobný ako JSON). Jej najaktuálnejšiu podobu je možné získať aj pomocou API.
 
-Myslíme, že pre náš projekt by bolo vhodné načítať a analyzovať tento STIX súbor, a následne na jeho základe pripraviť dáta vo vlastnom formáte, ktorý je vhodnejší pre náš konkrétny prístup.
+Myslíme, že pre náš projekt by bolo vhodné načítať a analyzovať tento STIX súbor a následne na jeho základe pripraviť dáta vo vlastnom formáte, ktorý je vhodnejší pre náš konkrétny prístup.
 
-Vytvorili sme experimentálny TS skript, ktorý vie tento dokument načítať a spracovať. Na jeho základe sme zistili, že typy objektov, ktoré dokument obsahuje, a ktoré sú použiteľné pre náš projekt, sú \uv{\textbf{attack-pattern}}, \uv{\textbf{course-of-action}}, \uv{\textbf{x-mitre-detection-strategy}}, \uv{\textbf{tool}} (prípadne), a \uv{\textbf{relationship}}.
+Vytvorili sme experimentálny TS skript, ktorý vie tento dokument načítať a spracovať. Na jeho základe sme zistili, že typy objektov, ktoré dokument obsahuje a ktoré sú použiteľné pre náš projekt, sú \uv{\textbf{attack-pattern}}, \uv{\textbf{course-of-action}}, \uv{\textbf{x-mitre-detection-strategy}}, \uv{\textbf{tool}} (prípadne) a \uv{\textbf{relationship}}.
 
 Okrem toho sme na základe JSON schémy STIX formátu vytvorili sériu TypeScriptových typov, ktoré umožnia jednoduchšie využívanie a spracovanie takýchto dát.
 
@@ -125,11 +125,11 @@ Medzi oboma systémami však existujú prepojenia -- mnohé ATT\&CK techniky odk
 
 \subsection{MITRE CWE}
 
-\textbf{CWE} sa hlavne zaoberá implementačnými/návrhovými slabinami softvéru, ktoré je potom možné využiť na napadnutie softvéru.
+\textbf{CWE} sa zaoberá najmä implementačnými/návrhovými slabinami softvéru, ktoré je potom možné využiť na napadnutie softvéru.
 
 Databáza CWE má tvar hierarchického stromu, ktorého prvkami sú uzly. Každý uzol definuje nejakú možnú zraniteľnosť systému a obsahuje meno, popis, časť životného cyklu systému, v ktorom sa objaví, potenciálne riešenia, výsledky, platné platformy a odkazy na vzory útokov z CAPEC, ktoré používajú túto slabinu.
 
-V závislosti od hĺbky, každý uzol môže mať typ \uv{Pillar}, \uv{Class}, \uv{Base}, alebo \uv{Variant}. Väčšina konkrétnych zraniteľností sú Base alebo Variant.
+V závislosti od hĺbky môže mať každý uzol typ \uv{Pillar}, \uv{Class}, \uv{Base} alebo \uv{Variant}. Väčšina konkrétnych zraniteľností sú Base alebo Variant.
 
 CWE taktiež poskytuje \uv{View} (pohľad), čo je skupina zraniteľností v závislosti od domény. Napríklad, poskytuje \uv{View} pre zraniteľnosti v softvére a zraniteľnosti v hardvéri.
 
@@ -138,28 +138,28 @@ CWE taktiež poskytuje \uv{View} (pohľad), čo je skupina zraniteľností v zá
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figma1.pdf}
-    \caption{Prvý návrh aplikácie v nástroji figma}
+    \caption{Prvý návrh aplikácie v nástroji Figma}
     \label{figma1}
 \end{figure}
 Okno aplikácie sa skladá zo 6 základných častí:
 \begin{enumerate}
-    \item Navigácia - klasická všeobecne zaužívaná navigácia v hornej časti okna - obsahuje všetky základné aj pokročilé funkcie na správu projektov, nastavení a nastavenie aplikácie samotnej.
-    \item Riadok s nástrojmi - určené pre nástroje používané pri práci s rôznymi časťami aplikácie. Tieto nástroje sa môžu meniť v závislosti od aktuálne otvoreného okna.
-    \item Navigácia v ľavej časti obrazovky - Obsahuje položky \textbf{Definition} na definíciu samotného projektu. Tu sa vytvárajú itemy, damage scenarios, threat scenarios, attack paths a prepojenia medzi nimi. \textbf{Analysis} pre vyhodnotenie rizík. \textbf{Resolution} pre návrhy riešenia a rôzne iné poznámky.
-    \item Hlavná časť aplikácie - obsahuje karty, ktoré sa otvárajú kliknutím na navigáciu v ľavej časti obrazovky alebo kliknutím na odkazy v hlavnej Časti aplikácie. Obsah kariet je už samotné jadro aplikácie - t.j. napríklad samotné vytváranie itemov prípadne spojení medzi nimi, vytváranie damage scenarios, výsledky analýzy a podobne.
-    \item Console - Umožňuje používateľovi zadávať príkazy a zobrazuje históriu vykonaných akcií.
-    \item Details - Zobrazuje detaily prvku, ktorý je práve zakliknutý. Napríklad pri analýze môže používateľ kliknúť na damage scenario a v detailoch by sa mu o ňom zobrazili bližšie informácie. Ak by chcel používateľ všetky informácie k danému prvku alebo by ho chcel modifikovať, mal by mať možnosť prvok jednoducho otvoriť aj ako okno v hlavnej časti aplikácie.
+    \item Navigácia -- klasická všeobecne zaužívaná navigácia v hornej časti okna -- obsahuje všetky základné aj pokročilé funkcie na správu projektov, nastavení a nastavenie samotnej aplikácie.
+    \item Riadok s nástrojmi -- určený pre nástroje používané pri práci s rôznymi časťami aplikácie. Tieto nástroje sa môžu meniť v závislosti od aktuálne otvoreného okna.
+    \item Navigácia v ľavej časti obrazovky -- obsahuje položky \textbf{Definition} na definíciu samotného projektu. Tu sa vytvárajú itemy, damage scenarios, threat scenarios, attack paths a prepojenia medzi nimi. \textbf{Analysis} slúži na vyhodnotenie rizík. \textbf{Resolution} slúži na návrhy riešenia a rôzne iné poznámky.
+    \item Hlavná časť aplikácie -- obsahuje karty, ktoré sa otvárajú kliknutím na navigáciu v ľavej časti obrazovky alebo kliknutím na odkazy v hlavnej časti aplikácie. Obsah kariet je už samotné jadro aplikácie -- t. j. napríklad samotné vytváranie itemov, prípadne spojení medzi nimi, vytváranie damage scenarios, výsledky analýzy a podobne.
+    \item Console -- umožňuje používateľovi zadávať príkazy a zobrazuje históriu vykonaných akcií.
+    \item Details -- zobrazuje detaily prvku, ktorý je práve vybraný. Napríklad pri analýze môže používateľ kliknúť na damage scenario a v detailoch by sa mu o ňom zobrazili bližšie informácie. Ak by chcel používateľ všetky informácie k danému prvku alebo by ho chcel modifikovať, mal by mať možnosť prvok jednoducho otvoriť aj ako okno v hlavnej časti aplikácie.
 \end{enumerate}
 \subsection{Definovanie systému}
 Na analýzu systému je najskôr potrebné definovať jeho časti, dáta, ktoré používajú, a vzťahy medzi nimi.
-Na toto bude možné využiť systémový diagram alebo jednotlivé tabs pre konkrétne položky (komponenty, dátové entity).
+Na to bude možné využiť systémový diagram alebo jednotlivé tabs pre konkrétne položky (komponenty, dátové entity).
 \subsubsection{Komponenty}
 Základom všetkého budú komponenty, z ktorých budeme skladať analyzovaný systém.
 Každý komponent bude mať svoje jedinečné ID, jeho názov a prípadný popis.
 Tiež môže obsahovať \textbf{dátové entity} a využívané \textbf{technológie}.
 
-Pre komponenty budú definované vzťahy parent-child, pomocou ktorých bude možno jednoduchšie modelovať a agregovať hrozby na komponentoch.
-Ďalším vzťahom bude vzťah komunikácie medzi komponentmi, kde jeden komponent môže komunikovať s ďalším(i), pri tomto vzťahu je možné pre každý jednotlivý vzťah zadefinovať jeho názov.
+Pre komponenty budú definované vzťahy parent-child, pomocou ktorých bude možné jednoduchšie modelovať a agregovať hrozby na komponentoch.
+Ďalším vzťahom bude vzťah komunikácie medzi komponentmi, kde jeden komponent môže komunikovať s ďalšími komponentmi. Pri tomto vzťahu je možné pre každý jednotlivý vzťah zadefinovať jeho názov.
 
 Prvým/základným komponentom bude tzv. systémový komponent, ktorý bude obsahovať všetky komponenty projektu ako children.
 \subsubsection{Dátové entity}
@@ -168,7 +168,7 @@ Každá dátová entita bude mať svoje jedinečné ID, názov a prípadný popi
 \subsubsection{Technológie}
 Technológie budú reprezentovať konkrétne technológie využívané v automobilovom priemysle (TCP/IP, UDP/IP, CAN bus, atď.).
 Sú definované jedinečným ID, názvom a krátkym popisom.
-Súčasťou aplikácie bude aj preddefinovaný list týchto technológií, ale používateľ bude mať možnosť definovať vlastné, ak je to potrebné.
+Súčasťou aplikácie bude aj preddefinovaný zoznam týchto technológií, ale používateľ bude mať možnosť definovať vlastné, ak je to potrebné.
 \begin{center}
     \includegraphics[width=0.75\textwidth]{erd-system.pdf}
 \end{center}
@@ -182,34 +182,34 @@ Používateľ ich následne môže upraviť, napríklad upraviť, aká časť CI
 Tiež môže doplniť položku impact scale, ktorá určuje počet zariadení, ktoré môžu byť zasiahnuté, a položku impact, ktorá definuje vplyv scenára na safety, financial, operational a privacy aspekty.
 
 \subsubsection{Asistent scenárov hrozieb}
-Asistent scenárov hrozieb bude využívať list definovaných hrozieb (budú existovať default hrozby, ale používateľ bude môcť dodefinovať vlastné), ktoré bude posudzovať na komponentoch/dátových entitách, kde boli určené scenáre poškodenia.
+Asistent scenárov hrozieb bude využívať zoznam definovaných hrozieb (budú existovať predvolené hrozby, ale používateľ bude môcť dodefinovať vlastné), ktoré bude posudzovať na komponentoch/dátových entitách, kde boli určené scenáre poškodenia.
 
 Následne budú scenáre hrozieb automaticky priradené k scenárom poškodenia, čím bude mať používateľ zľahčenú prácu.
 Pre kompletnosť scenára hrozby je potrebné dodefinovať kroky útoku, pomocou ktorých je hrozba realizovaná.
 
 \subsubsection{Asistent krokov útoku}
-Asistent scenárov tiež využíva list definovaných hrozieb a používateľom definované scenáre hrozieb.
-Pre každý scenár hrozby je vytvorený krok útoku, ktorý obsahuje informácie o tom, akú hrozbu spôsobuje, na akom komponente/datovej entite sa nachádza.
+Asistent scenárov tiež využíva zoznam definovaných hrozieb a používateľom definované scenáre hrozieb.
+Pre každý scenár hrozby je vytvorený krok útoku, ktorý obsahuje informácie o tom, akú hrozbu spôsobuje, na akom komponente/dátovej entite sa nachádza.
 
 Používateľ môže dodefinovať controls, ktoré dokážu zmierniť hrozbu alebo jej predísť, prípadne prípravný attack step, ktorý musí byť vykonaný pre fungovanie tohto kroku.
 Ďalším krokom bude vyplniť feasibility tabuľku, aby bol správne určený dopad kroku útoku na systém.
 
 \subsubsection{Controls}
 Controls slúžia na definovanie prvkov/opatrení, ktoré dokážu zmeniť dopad krokov útoku.
-Pri ich definícii je potrebné uviesť názov, komponent alebo dátovú entitu, na ktorú sa aplikujú, a na aké scenáre hrozby a kroky útoku mitigujú/sa aplikujú.
+Pri ich definícii je potrebné uviesť názov, komponent alebo dátovú entitu, na ktorú sa aplikujú, a aké scenáre hrozby a kroky útoku mitigujú alebo na ktoré sa aplikujú.
 Tiež je potrebné zadefinovať feasibility tabuľku, ktorá bude definovať feasibility hodnoty po aplikovaní control.
 
-Podobne ako pri technológiach bude existovať list preddefinovaných controls (napr. symetrické šifrovanie, asymetrické šifrovanie), ktoré bude používateľ môcť použiť.
+Podobne ako pri technológiach bude existovať zoznam preddefinovaných controls (napr. symetrické šifrovanie, asymetrické šifrovanie), ktoré bude používateľ môcť použiť.
 
 \begin{center}
     \includegraphics[width=0.85\textwidth]{erd-risks.pdf}
 \end{center}
 
 \subsection{Analýza rizík a mitigácia rizík}
-Na analýzu rizík budú používané control skupiny definované používateľom, ktoré umožnia vytvárať rôzne kombinácie opatrení, ktoré bude môcť porovnávať.
+Na analýzu rizík sa budú používať control skupiny definované používateľom, ktoré umožnia vytvárať rôzne kombinácie opatrení, ktoré bude môcť porovnávať.
 
-Výsledok analýzy je následne možné exportovať ako dokument, ktorý bude obsahovať informácie o systéme, scenároch poškodenia, hrozieb a aj krokoch útoku.
-Tiež bude obsahovať control opatrenia a ako sú aplikované na jednotlivé kroky útoku/scenáre hrozieb, kde bude jasné vidieť ktoré z nich boli alebo neboli "opravené" opatreniami.
+Výsledok analýzy je následne možné exportovať ako dokument, ktorý bude obsahovať informácie o systéme, scenároch poškodenia, scenároch hrozieb aj krokoch útoku.
+Tiež bude obsahovať control opatrenia a spôsob, akým sú aplikované na jednotlivé kroky útoku/scenáre hrozieb, kde bude jasne vidieť, ktoré z nich boli alebo neboli \uv{opravené} opatreniami.
 
 Ďalším nástrojom na analýzu a mitigáciu rizík bude možnosť použitia LLM, ktorý bude môcť využiť na analýzu alebo pomoc pri definovaní systému.
 
@@ -221,12 +221,14 @@ Používateľ bude môcť vytvoriť ďalšie skupiny, kde bude môcť definovať
 \subsubsection{Využitie LLM}
 Používateľ bude mať možnosť využiť LLM (buď lokálny model, alebo vie nastaviť využitie modelu cez API poskytovateľa) na prácu s definovaným systémom v aplikácii.
 
-Prvou možnosťou bude využitie nástrojov (implementované pomocou LangChain Tools), ktorými bude možné vytvoriť komponenty/dátové entity napísaním inštrukcií LLM (napr. "vytvor ECU komponent ktorý obsahuje 3 data entity a má podkomponent..."), čím sa značne zjednoduší proces modelovania systému.
+Prvou možnosťou bude využitie nástrojov (implementované pomocou LangChain Tools), ktorými bude možné vytvoriť komponenty/dátové entity napísaním inštrukcií LLM (napr. \uv{vytvor ECU komponent, ktorý obsahuje 3 data entity a má podkomponent...}), čím sa značne zjednoduší proces modelovania systému.
 
 Ďalšou možnosťou bude vykonávať analýzu nad vytvoreným systémom, kde bude mať model (ak to používateľ povolí) prístup ku kontextu systému a bude môcť analyzovať jeho časti podľa štandardu.
 
 \subsection{Backend}
-Backend server bude implementovaný použitím technológií \texttt{django} spolu s \texttt{rest framework} (\url{https://www.django-rest-framework.org/}). Okrem manipulácie s databázou bude server zabezpečovať autorizáciu a vnútornú logiku aplikácie. Nižšie sú popísané endpointy backend servera slúžiace na komunikáciu s frontendom. Na týchto endpointoch bude server prijímať alebo posielať JSON dáta.  Pri každom z nižšie uvedených endpointov je aj príklad dát, ktoré server očakáva (pre POST požiadavky) alebo odosiela (pre GET požiadavky). Uvedené sú iba názvy JSON polí, ich hodnoty sú vynechané. \\
+Backend server bol navrhnutý s použitím technológií \texttt{Django} spolu s \texttt{Django REST Framework} (\url{https://www.django-rest-framework.org/}). Okrem manipulácie s databázou mal server zabezpečovať autorizáciu a vnútornú logiku aplikácie.
+
+Nasledujúci zoznam endpointov je pôvodný návrh API z prototypovej fázy. Nejde o úplnú dokumentáciu finálnej implementácie. Výsledné API sa počas implementácie rozšírilo o projekty, JWT autorizáciu, \texttt{project\_id}, damage scenario concerns, control groups, risk treatment, cybersecurity goals, MITRE endpointy, report a LLM asistenta. Finálny stav je preto zložitejší a je opísaný neskôr v kapitole \uv{Výsledná implementácia}, najmä v časti \uv{Backend API a synchronizácia vzťahov}.
 
 \textbf{GET /api/component}
 \begin{verbatim}
@@ -474,14 +476,11 @@ threat_class_id, compromises: [
 ]}
 \end{verbatim}
 
-\vspace{2cm}
-Jednoduchý prototyp backend servera je k dispozícii na \url{https://github.com/oldo7/TP_team12_backend}
-
 \section{Frontend}
 \subsection{Návrh a prototyp aplikácie}
 Na vytvorenie frontendu vyvíjanej aplikácie sme sa rozhodli použiť technológiu React v kombinácii s nástrojom Vite ako vývojovým bundlerom. Technológie volíme prevažne kvôli tomu, že sú moderné, široko používané a poskytujú rýchle vývojové prostredie. React umožňuje rozdeľovanie GUI na menšie logické segmenty, čím sa výrazne uľahčuje vývoj.
 
-Pri vývoji využívame doplnkové knižnice, napríklad hlavne shadcn, Tailwind a Lucide, pomocou ktorých vytvárame konzistentné, moderné a vizuálne zjednotené prostredie. Pri návrhu homepage sme sa inšpirovali dizajnom z nástroja Figma zobrazeného na \nameref{figma1}.
+Pri vývoji využívame doplnkové knižnice, najmä shadcn, Tailwind a Lucide, pomocou ktorých vytvárame konzistentné, moderné a vizuálne zjednotené prostredie. Pri návrhu homepage sme sa inšpirovali dizajnom z nástroja Figma zobrazeného na \nameref{figma1}.
 
 V aktuálnej fáze projektu bol vytvorený funkčný prototyp frontendovej časti aplikácie. Prototyp obsahuje základné rozloženie homepage, rozloženie hlavných komponentov a demonštračné dáta, ktoré slúžia ako zástupné hodnoty. Na obrázku nižšie je uvedený screenshot aktuálneho stavu prototypu aplikácie, ktorý zobrazuje základné rozhranie a štruktúru frontendovej časti. (\nameref{frontend_prototype})
 
@@ -492,10 +491,10 @@ V aktuálnej fáze projektu bol vytvorený funkčný prototyp frontendovej čast
     \label{frontend_prototype}
 \end{figure}
 
-Zdrojový kód základného návrhu projektu nájdete tu: \url{https://github.com/rykktiadloans/TP_team12_frontend} (Prípadne: \url{https://github.com/Fer1SK/TP_team12_frontend/tree/main})
+Pôvodný frontend a backend vznikali ako samostatné prototypy. Vo finálnej fáze boli zlúčené do jedného repozitára, ktorý obsahuje adresáre \texttt{frontend/}, \texttt{backend/} a \texttt{documentation/}.
 
-\section{Backend - Iterácia 2}
-V tejto iterácii boli dokončené všetky endpointy, boli pridané projekty a ostatné CRUD operácie pre všetky databázové objekty. Tiež bola pridaná autentizácia a autorizácia používateľa pomocou JWT.
+\section[Backend -~druhá iterácia]{Backend -- druhá iterácia}
+V tejto historickej iterácii prototypu boli dokončené vtedajšie endpointy, boli pridané projekty a CRUD operácie pre hlavné databázové objekty. Tiež bola pridaná autentizácia a autorizácia používateľa pomocou JWT.
 
 \subsection{Autentizácia a autorizácia}
 Používateľ bude mať možnosť si vytvoriť účet, a ku svojmu účtu bude mať následne priradené projekty. V rámci projektov potom už bude mať jednotlivé komponenty, damage scenaria a ostatné. V prvom kroku si používateľ vytvorí účet pomocou nasledovného API callu:
@@ -572,7 +571,7 @@ odpoveď:
   }
 ]
 \end{verbatim}
-Následne už používa API cally definované už v predošlých kapitolách, pričom v každom uvedie id projektu s ktorým práve pracuje.
+Následne používa API volania definované v predošlých kapitolách, pričom v každom uvedie ID projektu, s ktorým práve pracuje.
 
 \subsection{Príklad použitia backendu}
 Nasleduje príklad použitia backendu, vrátane registrácie používateľa, s použitím softvéru \texttt{Postman}:
@@ -582,12 +581,12 @@ Nasleduje príklad použitia backendu, vrátane registrácie používateľa, s p
         \centering
         \includegraphics[width=\textwidth]{backend/scr1.png}
     \end{figure}
-    \item Prihlásenie používateľa - v odpovedi je token, ktorý sa použije v každej ďalšej požiadavke
+    \item Prihlásenie používateľa -- v odpovedi je token, ktorý sa použije v každej ďalšej požiadavke
     \begin{figure}[H]
         \centering
         \includegraphics[width=\textwidth]{backend/scr2.png}
     \end{figure}
-    \item Vytvorenie projektu. Na druhom obrázku je zobrazené, že token získaný v minulom kroku je v hlavičke \texttt{Authorization}. Bude sa odosielať po celý zvyšok sedenia. Vytvorený projekt je takto asociovaný s daným používateľom, a akékoľvek operácie s projektom budú musieť byť iba od tohto používateľa.
+    \item Vytvorenie projektu. Na druhom obrázku je zobrazené, že token získaný v minulom kroku je v hlavičke \texttt{Authorization}. Bude sa odosielať po celý zvyšok relácie. Vytvorený projekt je takto asociovaný s daným používateľom a akékoľvek operácie s projektom budú musieť byť iba od tohto používateľa.
     \begin{figure}[H]
         \centering
         \includegraphics[width=\textwidth]{backend/scr3.png}
@@ -596,7 +595,7 @@ Nasleduje príklad použitia backendu, vrátane registrácie používateľa, s p
         \centering
         \includegraphics[width=\textwidth]{backend/scr4.png}
     \end{figure}
-    \item Vytvorenie komponentu. Tu je dôležitá hlavne nová položka: \texttt{project\_id}. Komponent je teda asociovaný s práve jedným projektom. Táto položka, spolu s hlavičkou \texttt{Authorization} bude v každej ďalšej požiadavke pracujúcej s projektom.
+    \item Vytvorenie komponentu. Tu je dôležitá hlavne nová položka: \texttt{project\_id}. Komponent je teda asociovaný s práve jedným projektom. Táto položka spolu s hlavičkou \texttt{Authorization} bude v každej ďalšej požiadavke pracujúcej s projektom.
     \begin{figure}[H]
         \centering
         \includegraphics[width=\textwidth]{backend/scr5.png}
@@ -606,24 +605,24 @@ Nasleduje príklad použitia backendu, vrátane registrácie používateľa, s p
         \centering
         \includegraphics[width=\textwidth]{backend/scr6.png}
     \end{figure}
-    \item Získanie detailov konkrétneho komponentu. V tomto prípade je v query URL číslo komponentu (tak ako v predošlej verzii API), a následne v query parametroch je číslo projektu (tak ako v predošlej požiadavke)
+    \item Získanie detailov konkrétneho komponentu. V tomto prípade je v query URL číslo komponentu (tak ako v predošlej verzii API) a následne je v query parametroch číslo projektu (tak ako v predošlej požiadavke)
     \begin{figure}[H]
         \centering
         \includegraphics[width=\textwidth]{backend/scr7.png}
     \end{figure}
-    \item Vytvorenie damage scenaria. Súčasťou tela požiadavky je \texttt{component\_id} a \texttt{project\_id}. Tým pádom je daný damage scenario asociovaný s práve jedným komponentom, ktorý je v práve jednom projekte, pričom ako už bolo spomenuté, vlastníctvo daného projektu používateľom je zabezpečené hlavičkou \texttt{Authorization}. Na rovnakom princípe fungujú aj ostatné POST operácie, ako vytvorenie attack path alebo threat scenario.
+    \item Vytvorenie damage scenaria. Súčasťou tela požiadavky je \texttt{component\_id} a \texttt{project\_id}. Daný damage scenario je tak asociovaný s práve jedným komponentom, ktorý je v práve jednom projekte, pričom ako už bolo spomenuté, vlastníctvo daného projektu používateľom je zabezpečené hlavičkou \texttt{Authorization}. Na rovnakom princípe fungujú aj ostatné POST operácie, ako vytvorenie attack path alebo threat scenario.
     \begin{figure}[H]
         \centering
         \includegraphics[width=\textwidth]{backend/scr8.png}
     \end{figure}
-    \item Získanie detailov konkrétneho komponentu. Rovnaké ako pred dvoma krokmi - je tu iba pre ukážku, akým spôsobom sa damage scenario vytvorený v predošlom kroku pridal do komponentu.
+    \item Získanie detailov konkrétneho komponentu. Tento krok je rovnaký ako pred dvoma krokmi -- je tu iba pre ukážku, akým spôsobom sa damage scenario vytvorený v predošlom kroku pridal do komponentu.
     \begin{figure}[H]
         \centering
         \includegraphics[width=\textwidth]{backend/scr9.png}
     \end{figure}
 \end{enumerate}
 
-Nové zmeny sú dostupné na rovnakom repozitári ako prototyp: \url{https://github.com/oldo7/TP_team12_backend}
+Tieto backendové zmeny boli neskôr zlúčené s frontendovou časťou do spoločného repozitára projektu.
 
 \section{Výsledná implementácia}
 
@@ -631,11 +630,17 @@ Výsledkom projektu je funkčná webová aplikácia na tvorbu TARA analýzy pre 
 
 Finálna implementácia je rozdelená na dve časti. Backend je vytvorený v technológii \texttt{Django} spolu s \texttt{Django REST Framework}. Stará sa o databázu, autorizáciu, kontrolu prístupu k projektom, výpočty TARA hodnôt, generovanie reportu a komunikáciu s LLM asistentom. Frontend je vytvorený v technológii \texttt{React} s nástrojom \texttt{Vite}. Na rozhranie používa knižnice \texttt{Tailwind}, \texttt{shadcn/ui}, \texttt{lucide-react}, \texttt{Zustand} a \texttt{@xyflow/react}. Frontend teda rieši hlavne prácu s používateľom, vizualizáciu vzťahov, editáciu modelov a volanie backend API.
 
-V nasledujúcich častiach je popísaná výsledná aplikácia tak, ako funguje po dokončení. Popis je písaný z pohľadu práce používateľa, ale pri každej väčšej funkcionalite je zároveň uvedené, ako je riešená vnútri aplikácie a ako sú jednotlivé časti medzi sebou prepojené.
+V nasledujúcich častiach je opísaná výsledná aplikácia tak, ako funguje po dokončení. Popis je písaný z pohľadu práce používateľa, ale pri každej väčšej funkcionalite je zároveň uvedené, ako je riešená vnútri aplikácie a ako sú jednotlivé časti medzi sebou prepojené.
+
+\subsection{Beh a nasadenie aplikácie}
+
+Projekt je možné spustiť dvoma spôsobmi. Pri vývoji je výhodné spúšťať frontend a backend oddelene: Django beží na porte \texttt{8000} a Vite vývojový server na porte \texttt{5173}. V tomto režime frontend automaticky volá API na adrese \texttt{http://localhost:8000/api}.
+
+Pre reálne nasadenie je pripravený jeden Docker kontajner. Docker build najprv zostaví React/Vite frontend poskytovaný pod cestou \texttt{/static/}, potom výsledný \texttt{dist} adresár skopíruje do výsledného image. Django následne poskytuje statické frontend súbory cez \texttt{/static/} a samotnú single-page aplikáciu na koreňovej adrese \texttt{/}. Backend API ostáva dostupné pod \texttt{/api/} a Django admin pod \texttt{/admin/}. Potrebná Docker Compose konfigurácia preto obsahuje iba službu \texttt{app} a volume pre SQLite databázu.
 
 \subsection{Celkový tok práce v aplikácii}
 
-Po otvorení aplikácie sa používateľ najprv prihlási. Prihlásenie vyžaduje adresu backend servera, meno a heslo. Frontend predvolene očakáva backend na rovnakom hostiteľovi na porte \texttt{8000}, ale používateľ môže adresu zmeniť. Ak používateľ ešte nemá účet, môže na tej istej obrazovke prepnúť jednoduchý režim vytvorenia nového používateľa. Po registrácii sa frontend rovno pokúsi prihlásiť s novým účtom. Po úspešnom prihlásení backend vráti dvojicu JWT tokenov -- \texttt{access} a \texttt{refresh}. Frontend si ich uloží do \texttt{sessionStorage} a následne ich používa pri každej požiadavke na backend.
+Po otvorení aplikácie sa používateľ najprv prihlási. Prihlásenie vyžaduje meno a heslo. Ak používateľ ešte nemá účet, môže na tej istej obrazovke prepnúť jednoduchý režim vytvorenia nového používateľa. Po registrácii sa frontend rovno pokúsi prihlásiť s novým účtom. Po úspešnom prihlásení backend vráti dvojicu JWT tokenov -- \texttt{access} a \texttt{refresh}. Frontend si ich uloží do \texttt{sessionStorage} a následne ich používa pri každej požiadavke na backend.
 
 Po prihlásení používateľ vyberie existujúci projekt alebo vytvorí nový projekt. Projekt predstavuje samostatný TARA workspace. Všetky komponenty, technológie, scenáre, kroky útoku, controls a výsledné riziká sú vždy viazané na konkrétny projekt. Táto väzba je dôležitá aj bezpečnostne, pretože backend pri každom API volaní overuje, či prihlásený používateľ skutočne vlastní projekt, ktorého sa požiadavka týka. Nestačí teda poznať \texttt{project\_id}; požiadavka musí mať aj platný JWT token pre vlastníka projektu.
 
@@ -649,7 +654,7 @@ Po výbere projektu sa otvorí hlavná pracovná plocha. Tá je rozdelená na tr
 
 Tieto pohľady nepracujú s oddelenými dátami. Všetky používajú rovnaký stav projektu načítaný z backendu. Vo frontende je tento stav uložený v globálnom \texttt{Zustand} store. Store obsahuje mapy pre technológie, komponenty, data entities, controls, threat classes, attack steps, threat scenarios, damage scenarios, compromises a cybersecurity goals. Keď používateľ niečo upraví v detailovom paneli alebo cez asistenta, zmena sa odošle do backendu a následne sa obnoví aj lokálny stav. Vďaka tomu sa rovnaká zmena prejaví v grafe, tabuľkách aj v detailoch.
 
-Rozhranie hlavnej aplikácie má stabilné rozloženie. Hore je menubar a toolbar, vľavo je navigácia podľa aktuálneho režimu, v strede hlavný pracovný priestor, dole konzola a vpravo detailový panel. V hornom menu je okrem položiek \texttt{File} a \texttt{Help} aj tlačidlo \texttt{Login}, ktoré vymaže aktuálnu session, project ID a tokeny, a tým vráti aplikáciu späť na prihlasovaciu obrazovku. Toto je najjednoduchší spôsob, ako počas behu aplikácie prepnúť používateľa. Toto rozloženie nadväzuje na pôvodný návrh aplikácie z kapitoly \uv{Návrh}, ale vo výslednej implementácii sú jednotlivé časti už funkčne prepojené.
+Rozhranie hlavnej aplikácie má stabilné rozloženie. Hore je menubar a toolbar, vľavo je navigácia podľa aktuálneho režimu, v strede hlavný pracovný priestor, dole je konzola a vpravo detailový panel. V hornom menu je okrem položiek \texttt{File} a \texttt{Help} aj tlačidlo \texttt{Login}, ktoré vymaže aktuálnu session, project ID a tokeny, a tým vráti aplikáciu späť na prihlasovaciu obrazovku. Toto je najjednoduchší spôsob, ako počas behu aplikácie prepnúť používateľa. Toto rozloženie nadväzuje na pôvodný návrh aplikácie z kapitoly \uv{Návrh}, ale vo výslednej implementácii sú jednotlivé časti už funkčne prepojené.
 
 \subsection{Autentizácia, projekty a prístupové práva}
 
@@ -675,7 +680,7 @@ Finálna databázová vrstva je postavená okolo TARA pojmov. Oproti pôvodnému
 
 Model \texttt{Technology} reprezentuje technológie použité v systéme. Technológia má názov, popis a projekt. K technológiám sa môžu pripájať komponenty aj data entities. V praxi sem patria napríklad CAN, Ethernet, Bluetooth, Cellular, FreeRTOS, AUTOSAR SecOC alebo kryptografické mechanizmy.
 
-Technológie samy o sebe netvoria riziko, ale pomáhajú popísať prostredie, v ktorom komponent funguje. V LLM kontexte a v asistentoch sa používajú ako nápoveda pre to, aké typy hrozieb alebo útokov môžu byť relevantné. Vo frontende sa technológie zobrazujú v strome pod komponentmi, v grafickom pohľade ako samostatné karty a v detailoch ako vzťahy.
+Technológie samy o sebe netvoria riziko, ale pomáhajú opísať prostredie, v ktorom komponent funguje. V LLM kontexte a v asistentoch sa používajú ako nápoveda pre to, aké typy hrozieb alebo útokov môžu byť relevantné. Vo frontende sa technológie zobrazujú v strome pod komponentmi, v grafickom pohľade ako samostatné karty a v detailoch ako vzťahy.
 
 \subsubsection{Komponenty}
 
@@ -685,9 +690,9 @@ Komponent je v aplikácii jeden z najdôležitejších modelov, pretože veľká
 
 \subsubsection{Data entities}
 
-Model \texttt{DataEntity} slúži na reprezentáciu dát, ktoré majú v systéme hodnotu. Data entity má názov, popis, voliteľný komponent, zoznam technológií a projekt. V aktuálnej implementácii sa data entities používajú hlavne ako assets pri asistente Asset Identification. Asistent prechádza data entities a komponenty, a pre každé z nich navrhuje možné straty Confidentiality, Integrity a Availability.
+Model \texttt{DataEntity} slúži na reprezentáciu dát, ktoré majú v systéme hodnotu. Data entity má názov, popis, voliteľný komponent, zoznam technológií a projekt. V aktuálnej implementácii sa data entities používajú hlavne ako assets pri asistente Asset Identification a ako objekty načítané cez detail komponentu.
 
-V pôvodnom návrhu boli data entities samostatným pilierom definície systému. Vo výslednej implementácii sú podporené v dátovom modeli aj vo frontende, ale hlavná TARA stopa je vo finále vedená najmä cez komponenty, damage scenarios, threat scenarios a attack steps.
+V pôvodnom návrhu boli data entities samostatným pilierom definície systému. Vo výslednej implementácii sú podporené v dátovom modeli a v častiach frontendu, ale nemajú samostatné plnohodnotné CRUD endpointy ako komponenty, scenáre alebo controls. Samotná TARA analýza je preto vedená najmä cez komponenty, damage scenarios, threat scenarios a attack steps.
 
 \subsubsection{Threat classes}
 
@@ -715,7 +720,7 @@ Model \texttt{ThreatScenario} spája komponenty, attack steps a damage scenarios
 
 V implementácii je threat scenario veľmi dôležitý spojovací objekt. Ak attack step nie je priradený k threat scenariu, nevstupuje do výpočtu rizika. Ak damage scenario nie je priradené k threat scenariu, tiež nevzniká risk row. Preto backend aj frontend pri vytváraní vzťahov často automaticky dopĺňajú opačné väzby. Napríklad ak sa attack step pripojí k threat scenariu, backend zároveň vie zabezpečiť, aby komponent attack stepu bol pridaný medzi komponenty threat scenaria.
 
-Threat scenario má aj súvisiaci model \texttt{Compromises}. V aplikácii funguje ako compromise záznam. Ukladá komponent, threat scenario a CIA bitmask toho, čo je na danom komponente kompromitované. Vďaka tomu môže threat scenario presnejšie popísať, či ide o stratu Confidentiality, Integrity alebo Availability na konkrétnej časti systému.
+Threat scenario má aj súvisiaci model \texttt{Compromises}. V aplikácii funguje ako compromise záznam. Ukladá komponent, threat scenario a CIA bitmask toho, čo je na danom komponente kompromitované. Vďaka tomu môže threat scenario presnejšie opísať, či ide o stratu Confidentiality, Integrity alebo Availability na konkrétnej časti systému.
 
 \subsubsection{Damage scenarios a concerns}
 
@@ -897,13 +902,13 @@ Na backende sa control groups ukladajú v modeli \texttt{ControlGroup}. Report g
 
 \subsection{Asset Identification assistant}
 
-V režime \texttt{Assistants} je implementovaný asistent \texttt{Asset Identification}. Jeho cieľom je pomôcť používateľovi vytvoriť základné damage a threat scenarios pre existujúce assets. Asistent prechádza všetky data entities a komponenty v projekte. Pre každý asset vytvorí tri návrhy -- Confidentiality, Integrity a Availability.
+V režime \texttt{Assistants} je implementovaný asistent \texttt{Asset Identification}. Jeho cieľom je pomôcť používateľovi vytvoriť základné damage a threat scenarios pre existujúce assets. Asistent prechádza komponenty a data entities, ktoré sú už načítané v stave projektu. Pre každý asset vytvorí tri návrhy -- Confidentiality, Integrity a Availability.
 
 Návrhy sa zobrazujú v tabuľkovom zozname. Pri každom návrhu je stav: Proposed, Accepted, Rejected alebo Creating. Používateľ môže návrh prijať, odmietnuť, obnoviť odmietnutý návrh alebo použiť \texttt{Apply All}. Pri jednom assete sa dá použiť aj \texttt{Apply All} iba pre jeho tri CIA časti.
 
 Keď používateľ prijme návrh, frontend vytvorí nové threat scenario a nové damage scenario. Threat scenario má názov typu \uv{Confidentiality compromise of ...} a description obsahuje interný source tag. Damage scenario má názov typu \uv{Loss of Confidentiality for ...}. Ak asset patrí ku komponentu, damage scenario dostane concern na daný komponent s príslušnou CIA hodnotou. Threat scenario je pripojené ku komponentu a damage scenario je pripojené k threat scenariu.
 
-Source tag v popise nie je viditeľná funkcionalita pre koncového používateľa, ale používa sa na rozpoznanie, či už bol návrh vytvorený. Asistent vie nájsť damage scenario, ktoré obsahuje rovnaký source tag, a potom ho zobrazí ako \uv{Created}. Zároveň vie nájsť aj existujúce scenáre, ktoré už pokrývajú rovnaký komponent a CIA časť, a vtedy namiesto \uv{Accept} zobrazí možnosť \uv{Add another}. Tým sa znižuje riziko, že asistent bude vytvárať duplicitné scenáre bez upozornenia.
+Source tag v popise nie je viditeľný prvok pre koncového používateľa, ale používa sa na rozpoznanie, či už bol návrh vytvorený. Asistent vie nájsť damage scenario, ktoré obsahuje rovnaký source tag, a potom ho zobrazí ako \uv{Created}. Zároveň vie nájsť aj existujúce scenáre, ktoré už pokrývajú rovnaký komponent a CIA časť, a vtedy namiesto \uv{Accept} zobrazí možnosť \uv{Add another}. Tým sa znižuje riziko, že asistent bude vytvárať duplicitné scenáre bez upozornenia.
 
 Tento asistent je jednoduchší ako plný LLM asistent v konzole, ale má výhodu, že je deterministický. Nepotrebuje externé API a funguje vždy nad aktuálnym modelom. Je vhodný hlavne v začiatku analýzy, keď má projekt definované komponenty a dáta, ale ešte chýbajú základné damage scenarios.
 
@@ -979,9 +984,9 @@ Pri otvorení projektu store zavolá \texttt{getProjectState} a \texttt{getProje
 
 Keď používateľ upraví objekt v detailovom paneli, najprv sa zmení lokálny stav cez \texttt{setItem}. Po krátkom oneskorení sa zavolá \texttt{saveItem}, ktorý pošle update na backend. Ak ide o typ, ktorého zmena môže ovplyvniť vzťahy a riziká, napríklad threat scenario, damage scenario alebo attack step, frontend po uložení znovu načíta projektový stav. Tým sa aktualizujú odvodené polia, concerns, riziká aj strom.
 
-Keď používateľ vytvorí nový objekt, \texttt{addItem} ho uloží cez API. Ak API vráti objekt s projektom, frontend znovu načíta celý projektový stav. Je to jednoduchšie a bezpečnejšie ako ručne skladať všetky odvodené vzťahy na klientovi. Pri mazaní objektu sa volá \texttt{deleteItem}, ktorý zmaže objekt cez API a potom ho odstráni z lokálneho store.
+Keď používateľ vytvorí nový objekt pre typ podporovaný API, \texttt{addItem} ho uloží cez backend. Ak API vráti objekt s projektom, frontend znovu načíta celý projektový stav. Je to jednoduchšie a bezpečnejšie ako ručne skladať všetky odvodené vzťahy na klientovi. Pri mazaní objektu sa volá \texttt{deleteItem}, ktorý pri podporovaných typoch zmaže objekt cez API a potom ho odstráni z lokálneho store.
 
-Vzťahy sa spravujú cez \texttt{addConnection} a \texttt{deleteConnection}. Tieto funkcie najprv určia, ktorá strana vzťahu vlastní príslušné pole. Napríklad data entity má pole \texttt{component}, component nemá pole \texttt{data\_entities}. Pri vzťahu data entity -- component sa teda upravuje data entity. Pri many-to-many vzťahoch sa upravuje pole so zoznamom ID. Toto umožňuje, aby rovnaké vytváranie vzťahov fungovalo z grafu, zo stromu aj z detailového panelu.
+Vzťahy sa spravujú cez \texttt{addConnection} a \texttt{deleteConnection}. Tieto funkcie najprv určia, ktorá strana vzťahu vlastní príslušné pole. Pri typoch s plnou API podporou sa zmena odošle do backendu a následne sa obnoví stav projektu. Niektoré pomocné typy, najmä data entities a compromises, sú v aktuálnej implementácii skôr načítavané a zobrazované ako samostatne spravované. Pri nich teda priame zmeny vo frontende nemajú rovnakú perzistentnú CRUD podporu ako komponenty, attack steps, threat scenarios, damage scenarios, controls alebo cybersecurity goals.
 
 \subsection{Príklad práce s aplikáciou}
 
@@ -991,7 +996,7 @@ Typický workflow môže vyzerať takto:
     \item Používateľ sa prihlási a otvorí projekt \uv{Auto security}.
     \item V graph view vytvorí komponenty ako Infotainment Head Unit, Central Gateway, TCU alebo Engine ECU.
     \item Ku komponentom pripojí technológie ako CAN, Bluetooth/BLE, Cellular alebo Automotive Ethernet.
-    \item V asistentovi Asset Identification pre komponenty alebo data entities prijme návrhy CIA strát. Tým sa vytvoria prvé threat scenarios a damage scenarios.
+    \item V asistentovi Asset Identification pre komponenty, prípadne existujúce data entities, prijme návrhy CIA strát. Tým sa vytvoria prvé threat scenarios a damage scenarios.
     \item V detailoch damage scenaria nastaví konkrétne affected components a impact hodnoty pre safety, financial, operational a privacy.
     \item Vytvorí attack steps, napríklad Gateway Firewall Bypass, Unauthorized Firmware Flashing alebo CAN Command Injection. Pri každom doplní faktorové hodnoty pre attack feasibility.
     \item Attack steps pripojí k threat scenarios a threat scenarios k damage scenarios. V grafe tým vznikne stopa od útoku cez hrozbu až po škodu.
@@ -1010,13 +1015,13 @@ Výsledná implementácia pokrýva hlavné časti TARA workflow, ale stále exis
 
 Hierarchia komponentov z pôvodného návrhu nie je vo finálnom modeli riešená ako parent-child strom. Komponenty majú komunikačné vzťahy a strom projektu sa skladá z odvodených vzťahov, ale nie je tam explicitný rodičovský komponent. Ak by sa aplikácia ďalej rozvíjala, dalo by sa pridať pole \texttt{parent} na komponent a tým podporiť komplexnejšie systémy.
 
-Data entities sú v aplikácii podporené, ale výpočet rizík je vedený hlavne cez komponenty, threat scenarios a damage scenarios. Pre detailnejšiu asset-centric analýzu by sa dali damage scenario concerns rozšíriť aj na data entities, nielen komponenty.
+Data entities sú v aplikácii podporené len čiastočne. Existujú v databázovom modeli a frontend ich vie zobraziť, ale aktuálne nemajú samostatný plnohodnotný CRUD workflow cez API a UI. Výpočet rizík je vedený hlavne cez komponenty, threat scenarios a damage scenarios. Pre detailnejšiu asset-centric analýzu by sa dali doplniť samostatné endpointy a damage scenario concerns rozšíriť aj na data entities, nielen komponenty.
 
 LLM asistent pripravuje návrhy a vie analyzovať aktuálny stav, ale konečné rozhodnutie ostáva na používateľovi. To je správne z hľadiska bezpečnosti aj kvality TARA analýzy. V budúcnosti by sa však dali pridať špecializované nástroje pre návrh attack paths z MITRE dát, kontrolu konzistencie podľa ISO/SAE 21434 alebo automatické generovanie cybersecurity goals z rizík.
 
 MITRE integrácia je zatiaľ referenčná. Aplikácia vie použiť tactics a techniques, ale nevykonáva hlboké mapovanie medzi automotive komponentmi a MITRE technikami. Toto by mohlo byť ďalším smerom rozvoja, hlavne ak by sa pridali aj CAPEC alebo CWE dáta, ktoré boli popísané v skorších kapitolách.
 
-Report je funkčný a pokrýva hlavné výstupy, ale dá sa ďalej zlepšiť po vizuálnej a metodickej stránke. Napríklad by mohol obsahovať samostatné kapitoly pre metodiku hodnotenia, históriu zmien alebo explicitné odkazy na ISO/SAE 21434 clauses.
+Report je funkčný a pokrýva hlavné výstupy, ale dá sa ďalej zlepšiť po vizuálnej a metodickej stránke. Napríklad by mohol obsahovať samostatné kapitoly pre metodiku hodnotenia, históriu zmien alebo explicitné odkazy na ustanovenia ISO/SAE 21434.
 
 \subsection{Zhrnutie výsledku}
 
